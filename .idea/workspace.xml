@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8ea7077-334e-4c97-8e2c-22ea1af53f47" name="Changes" comment="" />
+    <list default="true" id="a8ea7077-334e-4c97-8e2c-22ea1af53f47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/content/tattoos.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/Artist.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/anime-show.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/blackwork-show.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/fineline-show.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/blackwork1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/blackwork2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/blackwork3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/blackwork4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/fineline1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Website TKB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Website TKB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/admin/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/admin/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/assets/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/components/main-content.html" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/components/main-content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,8 +70,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LuciaDC245&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LuciaDC245/tattoo-artist-kurbanov-website.git&quot;,
+    &quot;accountId&quot;: &quot;32eba3e3-59e9-467c-ac0e-0e532948e093&quot;
+  }
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -60,7 +102,9 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "development",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Website TKB",
     "list.type.of.created.stylesheet": "CSS",
@@ -75,6 +119,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Website TKB\tattoo-portfolio\assets\images\uploads" />
+      <recent name="C:\Website TKB\tattoo-portfolio\assets\images" />
+      <recent name="C:\Website TKB\tattoo-portfolio\assets" />
+      <recent name="C:\Website TKB\tattoo-portfolio\assets\images\content" />
       <recent name="C:\Website TKB\tattoo-portfolio" />
     </key>
   </component>
@@ -94,12 +142,17 @@
       <option name="presentableId" value="Default" />
       <updated>1787286487451</updated>
       <workItem from="1787286488696" duration="4911000" />
-      <workItem from="1787292668369" duration="551000" />
+      <workItem from="1787292668369" duration="4558000" />
+      <workItem from="1787343421415" duration="2884000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

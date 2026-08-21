@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: main # Oder 'master', je nach deinem GitHub-Branch-Namen
+  branch: master # Oder 'master', je nach deinem GitHub-Branch-Namen
 
-media_folder: "assets/images/uploads" # Wo hochgeladene Bilder gespeichert werden
-public_folder: "assets/images/uploads"
+media_folder: "assets/images" # Wo hochgeladene Bilder gespeichert werden
+public_folder: "assets/images"
 
 collections:
   # 1. BEREICH: Allgemeine Artist-Infos & Social Links
@@ -31,5 +31,5 @@ collections:
         label: "Kategorie",
         name: "category",
         widget: "select",
-        options: ["anime", "fineline", "blackwork", "color"]
+        options: ["anime", "fineline", "blackwork"]
       }

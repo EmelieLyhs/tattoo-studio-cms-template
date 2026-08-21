@@ -1,0 +1,52 @@
+[
+  {
+    "src": "assets/images/uploads/anime1.jpeg",
+    "categories": ["anime", "fineline" ],
+    "alt": "Anime Tattoo"
+  },
+  {
+    "src": "assets/images/uploads/anime2.jpeg",
+    "categories": ["anime", "fineline"],
+    "alt": "Anime Tattoo"
+  },
+  {
+    "src": "assets/images/uploads/anime3.jpeg",
+    "categories": "anime",
+    "alt": "Anime Tattoo"
+  },
+  {
+    "src": "assets/images/uploads/anime4.jpeg",
+    "categories": ["anime", "blackwork"],
+    "alt": "Anime Tattoo"
+  },
+  {
+  "src": "assets/images/uploads/anime5.jpeg",
+  "categories": ["anime", "fineline"],
+  "alt": "Anime Tattoo"
+  },
+  {
+    "src": "assets/images/uploads/fineline1.jpeg",
+    "categories": "fineline",
+    "alt": "Fine Line Tattoo"
+  },
+  {
+    "src": "assets/images/uploads/blackwork1.jpeg",
+    "categories": "blackwork",
+    "alt": "Blackwork Tattoo"
+  },
+  {
+    "src": "assets/images/uploads/blackwork2.jpeg",
+    "categories": "blackwork",
+    "alt": "Blackwork Tattoo"
+  },
+  {
+    "src": "assets/images/uploads/blackwork3.jpeg",
+    "categories": "blackwork",
+    "alt": "Blackwork Tattoo"
+  },
+  {
+    "src": "assets/images/uploads/blackwork4.jpeg",
+    "categories": "blackwork",
+    "alt": "Blackwork Tattoo"
+  }
+]

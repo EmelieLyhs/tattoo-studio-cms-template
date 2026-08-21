@@ -1,7 +1,7 @@
 async function loadComponents() {
     const components = [
         {id: 'header-placeholder', file: 'components/header.html'},
-        {id: 'main-placeholder', file: 'components/main-content'}
+        {id: 'main-placeholder', file: 'components/main-content.html'}
     ];
 
     for (const comp of components) {
@@ -35,8 +35,8 @@ function initGalleryFilter() {
 
             // Elemente ein-/ausblenden
             items.forEach(item => {
-                const category = item.getAttribute('data-category');
-                if (filter === 'all' || filter === category) {
+                const itemCategories = item.getAttribute('data-categories').split(',');
+                if (filter === 'all' || itemCategories.includes(filter)) {
                     item.style.display = 'block';
                 } else {
                     item.style.display = 'none';
@@ -60,10 +60,45 @@ async function loadProfileData() {
     }
 }
 
+async function loadGallery() {
+    const container = document.getElementById('gallery-container');
+    if (!container) return;
+
+    try {
+        const response = await fetch('assets/content/tattoos.json');
+        const tattoos = await response.json();
+
+        // Generiert für jedes Bild im JSON den passenden HTML-Code
+        container.innerHTML = tattoos.map(tattoo => {
+        const categoriesString = Array.isArray(tattoo.categories)
+            ? tattoo.categories.join(',')
+            : tattoo.category || '';
+
+        return `
+            <div class="gallery-item" data-category="${tattoo.category}">
+                <img src="${tattoo.src}" alt="${tattoo.alt}" loading="lazy">
+            </div>
+        `}).join('');
+
+        // Aktiviert danach die Filter-Logik
+        initGalleryFilter();
+
+    } catch (error) {
+        console.error('Fehler beim Laden der Galerie-Bilder:', error);
+    }
+}
+
+// Nach dem Laden der Main-Komponente aufrufen:
+document.addEventListener('DOMContentLoaded', () => {
+    // Falls deine Komponenten async geladen werden, rufe loadGallery() auf, sobald main-placeholder befüllt ist
+    setTimeout(loadGallery, 200);
+});
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
     loadComponents();
     initGalleryFilter();
     loadProfileData();
+    loadGallery();
 });
