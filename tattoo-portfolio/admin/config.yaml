@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main # Oder 'master', je nach deinem GitHub-Branch-Namen
+
+media_folder: "assets/images/uploads" # Wo hochgeladene Bilder gespeichert werden
+public_folder: "assets/images/uploads"
+
+collections:
+  # 1. BEREICH: Allgemeine Artist-Infos & Social Links
+  - name: "settings"
+    label: "Einstellungen & Profil"
+    files:
+      - file: "content/settings.json"
+        label: "Artist Profil & Links"
+        name: "profile"
+        fields:
+          - { label: "Über mich Text", name: "about_text", widget: "text" }
+          - { label: "Instagram Link", name: "instagram_url", widget: "string" }
+          - { label: "Profilbild", name: "artist_image", widget: "image" }
+
+  # 2. BEREICH: Portfolio-Tattoos
+  - name: "portfolio"
+    label: "Portfolio Tattoos"
+    folder: "content/portfolio"
+    create: true # Erlaubt das Hinzufügen neuer Tattoos
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel / Beschreibung", name: "title", widget: "string" }
+      - { label: "Tattoo Bild", name: "image", widget: "image" }
+      - {
+        label: "Kategorie",
+        name: "category",
+        widget: "select",
+        options: ["anime", "fineline", "blackwork", "color"]
+      }

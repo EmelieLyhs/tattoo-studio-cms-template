@@ -1,0 +1,55 @@
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CUSTOM TATTOOS & FINE LINE ART</h1>
+            <p>Exklusive Entwürfe, präzise gestochen.</p>
+            <a href="#contact" class="btn">BUCHUNG ANFRAGEN</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>PORTFOLIO</h2>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">ALLE</button>
+            <button class="filter-btn" data-filter="anime">ANIME</button>
+            <button class="filter-btn" data-filter="fineline">FINE LINE</button>
+            <button class="filter-btn" data-filter="blackwork">BLACKWORK</button>
+        </div>
+
+        <!-- Galerie mit Kategorien -->
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="anime">
+                <img src="assets/images/tattoo1.jpg" alt="Anime Tattoo">
+            </div>
+            <div class="gallery-item" data-category="fineline">
+                <img src="assets/images/tattoo2.jpg" alt="Fine Line Tattoo">
+            </div>
+            <div class="gallery-item" data-category="anime">
+                <img src="assets/images/tattoo3.jpg" alt="Anime Tattoo 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="about-contact" class="grid-section">
+        <div id="about" class="about-box">
+            <h2>ÜBER MICH</h2>
+            <div class="artist-profile">
+                <img src="https://via.placeholder.com/150x180/2a2a2a/ffffff?text=Artist" alt="Kurbanov Tattoo">
+                <p>Spezialisiert auf feine Linien, düstere Motive und individuelle Custom Designs. Jedes Tattoo wird exakt an die Anatomie angepasst.</p>
+            </div>
+        </div>
+
+        <div id="contact" class="contact-box">
+            <h2>TERMIN ANFRAGEN</h2>
+            <form name="tattoo-booking" method="POST" data-netlify="true" class="booking-form">
+                <input type="text" name="name" placeholder="Dein Name" required>
+                <input type="email" name="email" placeholder="E-Mail-Adresse" required>
+                <input type="text" name="idea" placeholder="Tattoo-Idee / Stelle" required>
+                <input type="text" name="size" placeholder="Größe (ca. in cm)">
+                <button type="submit" class="btn btn-submit">ANFRAGE ABSENDEN</button>
+            </form>
+        </div>
+    </section>
+</main>
