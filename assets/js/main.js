@@ -54,7 +54,7 @@ function initGalleryFilter() {
 // Beispieldaten aus dem CMS für das Profil laden
 async function loadProfileData() {
     try {
-        const response = await fetch('content/settings.json');
+        const response = await fetch('../assets/content/js/settings.json');
         const data = await response.json();
 
         // Texte und Links im HTML ersetzen
@@ -70,7 +70,7 @@ async function loadGallery() {
     if (!container) return;
 
     try {
-        const response = await fetch('assets/content/tattoos.json');
+        const response = await fetch('../assets/content/tattoos.json');
         const tattoos = await response.json();
 
         // Generiert für jedes Bild im JSON den passenden HTML-Code
