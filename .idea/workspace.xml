@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8ea7077-334e-4c97-8e2c-22ea1af53f47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/content/tattoos.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/Artist.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/anime-show.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/blackwork-show.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/fineline-show.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/anime5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/blackwork1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/blackwork2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/blackwork3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/blackwork4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/images/uploads/fineline1.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Website TKB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Website TKB.iml" afterDir="false" />
+    <list default="true" id="a8ea7077-334e-4c97-8e2c-22ea1af53f47" name="Changes" comment="Enhance gallery functionality and improve site structure&#10;&#10;Refactored gallery to dynamically load images from a JSON file for easier maintainability and scalability. Introduced new styles for improved gallery presentation and replaced placeholder images with real assets. Updated configurations and dependencies, including Netlify CMS setup, to align with new content management workflows.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/admin/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/admin/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/assets/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/admin/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/admin/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/assets/content/tattoos.json" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/content/tattoos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tattoo-portfolio/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/components/main-content.html" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/components/main-content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tattoo-portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tattoo-portfolio/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,25 +78,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "development",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Website TKB",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Website TKB&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Website TKB\tattoo-portfolio\assets\images\uploads" />
@@ -143,8 +123,18 @@
       <updated>1787286487451</updated>
       <workItem from="1787286488696" duration="4911000" />
       <workItem from="1787292668369" duration="4558000" />
-      <workItem from="1787343421415" duration="2884000" />
+      <workItem from="1787343421415" duration="3362000" />
+      <workItem from="1787390951446" duration="2167000" />
     </task>
+    <task id="LOCAL-00001" summary="Enhance gallery functionality and improve site structure&#10;&#10;Refactored gallery to dynamically load images from a JSON file for easier maintainability and scalability. Introduced new styles for improved gallery presentation and replaced placeholder images with real assets. Updated configurations and dependencies, including Netlify CMS setup, to align with new content management workflows.">
+      <option name="closed" value="true" />
+      <created>1787346824014</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1787346824015</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +142,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Refactor configuration and add header styles; implement dynamic gallery loading" />
+    <MESSAGE value="Enhance gallery functionality and improve site structure&#10;&#10;Refactored gallery to dynamically load images from a JSON file for easier maintainability and scalability. Introduced new styles for improved gallery presentation and replaced placeholder images with real assets. Updated configurations and dependencies, including Netlify CMS setup, to align with new content management workflows." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance gallery functionality and improve site structure&#10;&#10;Refactored gallery to dynamically load images from a JSON file for easier maintainability and scalability. Introduced new styles for improved gallery presentation and replaced placeholder images with real assets. Updated configurations and dependencies, including Netlify CMS setup, to align with new content management workflows." />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

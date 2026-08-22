@@ -27,15 +27,19 @@ function initGalleryFilter() {
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            // Aktiven Button hervorheben
             buttons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
             const filter = button.getAttribute('data-filter');
 
-            // Elemente ein-/ausblenden
             items.forEach(item => {
-                const itemCategories = item.getAttribute('data-categories').split(',');
+                // Liest data-categories ODER als Fallback data-category aus (verhindert null)
+                const rawCategories = item.getAttribute('data-categories') || item.getAttribute('data-category') || '';
+
+                // Wandelt den String in ein sauber getrimmtes Array um
+                const itemCategories = rawCategories.split(',').map(cat => cat.trim());
+
+                // Prüft, ob 'all' gewählt ist ODER ob die Kategorie enthalten ist
                 if (filter === 'all' || itemCategories.includes(filter)) {
                     item.style.display = 'block';
                 } else {
