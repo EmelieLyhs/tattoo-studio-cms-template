@@ -26,7 +26,7 @@
         <div id="about" class="about-box">
             <h2>ÜBER MICH</h2>
             <div class="artist-profile">
-                <img src="assets/images/Artist.jpeg" alt="Kurbanov Tattoo">
+                <img src="../assets/images/Artist.jpeg" alt="Kurbanov Tattoo">
                 <p>Spezialisiert auf feine Linien, düstere Motive und individuelle Custom Designs. Jedes Tattoo wird exakt an die Anatomie angepasst.</p>
             </div>
         </div>
@@ -34,10 +34,18 @@
         <div id="contact" class="contact-box">
             <h2>TERMIN ANFRAGEN</h2>
             <form name="tattoo-booking" method="POST" data-netlify="true" class="booking-form">
-                <input type="text" name="name" placeholder="Dein Name" required>
-                <input type="email" name="email" placeholder="E-Mail-Adresse" required>
-                <input type="text" name="idea" placeholder="Tattoo-Idee / Stelle" required>
-                <input type="text" name="size" placeholder="Größe (ca. in cm)">
+                <label>
+                    <input type="text" name="name" placeholder="Dein Name" required>
+                </label>
+                <label>
+                    <input type="email" name="email" placeholder="E-Mail-Adresse" required>
+                </label>
+                <label>
+                    <input type="text" name="idea" placeholder="Tattoo-Idee / Stelle" required>
+                </label>
+                <label>
+                    <input type="text" name="size" placeholder="Größe (ca. in cm)">
+                </label>
                 <button type="submit" class="btn btn-submit">ANFRAGE ABSENDEN</button>
             </form>
         </div>
