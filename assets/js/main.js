@@ -1,7 +1,8 @@
 async function loadComponents() {
     const components = [
         {id: 'header-placeholder', file: 'components/header.html'},
-        {id: 'main-placeholder', file: 'components/main-content.html'}
+        {id: 'main-placeholder', file: 'components/main-content.html'},
+        {id: 'footer-placeholder', file: 'components/footer/footer.html'},
     ];
 
     for (const comp of components) {
@@ -91,6 +92,7 @@ async function loadGallery() {
         console.error('Fehler beim Laden der Galerie-Bilder:', error);
     }
 }
+
 
 // Nach dem Laden der Main-Komponente aufrufen:
 document.addEventListener('DOMContentLoaded', () => {

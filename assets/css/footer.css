@@ -1,0 +1,64 @@
+/* Footer Base Styles */
+.site-footer {
+    background-color: #0d0d0d;
+    border-top: 1px solid #222;
+    color: #aaa;
+    padding: 60px 20px 20px;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.footer-brand h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-social h4,
+.footer-legal h4 {
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-legal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-legal li {
+    margin-bottom: 8px;
+}
+
+.footer-social a,
+.footer-legal a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover,
+.footer-legal a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+}
