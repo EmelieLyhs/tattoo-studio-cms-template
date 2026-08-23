@@ -137,32 +137,164 @@ body {
     border: 1px solid #333;
 }
 
-/* Formular */
+/* ==========================================
+   TATTOO BOOKING FORM - DARK STUDIO STYLE
+   ========================================== */
+
 .booking-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #111111;
+    padding: 2.5rem;
+    border: 1px solid #222222;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.booking-form input {
+/* Form Groups & Labels */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #888888;
+    font-weight: 600;
+}
+
+/* Text Inputs, Selects & Textareas */
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form select,
+.booking-form textarea {
     width: 100%;
-    padding: 12px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #444;
-    color: #fff;
+    padding: 0.9rem 1rem;
+    background-color: #181818;
+    border: 1px solid #333333;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 0.95rem;
     font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
-.booking-form input:focus {
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
     outline: none;
-    border-bottom-color: #fff;
+    border-color: #ffffff;
+    background-color: #202020;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 }
 
-.btn-submit {
-    margin-top: 15px;
-    width: 100%;
+/* Custom Select-Styling */
+.booking-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+    cursor: pointer;
 }
+
+/* Styled File Upload Box */
+.file-upload-wrapper {
+    position: relative;
+    border: 1px dashed #444444;
+    padding: 1.5rem;
+    text-align: center;
+    background: #151515;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-wrapper:hover {
+    border-color: #ffffff;
+    background: #1c1c1c;
+}
+
+.file-upload-wrapper input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-text {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.file-upload-text span.icon {
+    font-size: 1.4rem;
+}
+
+/* Custom Checkbox Styling */
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #444444;
+    background: #181818;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+    content: '✓';
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.checkbox-group label {
+    font-size: 0.85rem;
+    color: #cccccc;
+    cursor: pointer;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+
 
 /* Lightbox Modal */
 .modal {

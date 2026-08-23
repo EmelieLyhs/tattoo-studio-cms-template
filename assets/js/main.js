@@ -22,26 +22,24 @@ async function loadComponents() {
     }
 }
 
-function initGalleryFilter() {
-    const buttons = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.gallery-item');
+function initGalleryFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    buttons.forEach(button => {
+    if (!filterButtons.length || !galleryItems.length) return;
+
+    filterButtons.forEach(button => {
+        // Event-Listener anhängen
         button.addEventListener('click', () => {
-            buttons.forEach(btn => btn.classList.remove('active'));
+            // Active-Klasse bei allen Buttons entfernen und beim geklickten hinzufügen
+            filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            const filter = button.getAttribute('data-filter');
+            const filterValue = button.getAttribute('data-filter');
 
-            items.forEach(item => {
-                // Liest data-categories ODER als Fallback data-category aus (verhindert null)
-                const rawCategories = item.getAttribute('data-categories') || item.getAttribute('data-category') || '';
-
-                // Wandelt den String in ein sauber getrimmtes Array um
-                const itemCategories = rawCategories.split(',').map(cat => cat.trim());
-
-                // Prüft, ob 'all' gewählt ist ODER ob die Kategorie enthalten ist
-                if (filter === 'all' || itemCategories.includes(filter)) {
+            galleryItems.forEach(item => {
+                // Wenn 'all' gewählt ist ODER das Element die gewählte Kategorie-Klasse enthält
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
                     item.style.display = 'block';
                 } else {
                     item.style.display = 'none';
@@ -51,46 +49,39 @@ function initGalleryFilter() {
     });
 }
 
-// Beispieldaten aus dem CMS für das Profil laden
-async function loadProfileData() {
+async function loadGallery() {
     try {
-        const response = await fetch('../assets/content/js/settings.json');
+        const response = await fetch('./content/tattoos.json?' + Date.now());
+        if (!response.ok) return;
         const data = await response.json();
 
-        // Texte und Links im HTML ersetzen
-        document.getElementById('about-text').innerText = data.about_text;
-        document.getElementById('instagram-link').href = data.instagram_url;
-    } catch (e) {
-        console.log("Profil-Daten noch nicht angelegt.");
-    }
-}
+        const items = data.items || [];
+        const container = document.getElementById('gallery-container');
+        if (!container) return;
 
-async function loadGallery() {
-    const container = document.getElementById('gallery-container');
-    if (!container) return;
+        container.innerHTML = '';
 
-    try {
-        const response = await fetch('../assets/content/tattoos.json');
-        const tattoos = await response.json();
+        items.forEach(item => {
+            const card = document.createElement('div');
 
-        // Generiert für jedes Bild im JSON den passenden HTML-Code
-        container.innerHTML = tattoos.map(tattoo => {
-        const categoriesString = Array.isArray(tattoo.categories)
-            ? tattoo.categories.join(',')
-            : tattoo.category || '';
+            // Verarbeitet Mehrfachauswahl (Array) ODER Einzelkategorie (String als Fallback)
+            let categoryClasses = '';
+            if (Array.isArray(item.categories)) {
+                categoryClasses = item.categories.join(' ');
+            } else if (item.category) {
+                categoryClasses = item.category;
+            }
 
-        return `
-            <div class="gallery-item" data-category="${tattoo.category}">
-                <img src="${tattoo.src}" alt="${tattoo.alt}" loading="lazy">
-            </div>
-        `}).join('');
+            // Fügt alle gewählten Kategorien als CSS-Klassen hinzu
+            card.className = `gallery-item ${categoryClasses}`;
+            card.innerHTML = `<img src="${item.image}" alt="${item.title || 'Tattoo'}">`;
 
-        // Aktiviert danach die Filter-Logik
-        initGalleryFilter();
-        initLightbox();
+            container.appendChild(card);
+        });
 
-    } catch (error) {
-        console.error('Fehler beim Laden der Galerie-Bilder:', error);
+        initGalleryFilters(); // Filter-Events aktivieren
+    } catch (err) {
+        console.error("Fehler beim Laden der Galerie:", err);
     }
 }
 
@@ -135,9 +126,47 @@ function initLightbox() {
     });
 }
 
+// Profil & Einstellungen aus CMS laden
+// Profil & Einstellungen aus CMS laden
+async function loadSettings() {
+    try {
+        const response = await fetch('./content/settings.json?' + Date.now());
+        if (!response.ok) return;
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadComponents();
-    loadProfileData();
-    setTimeout(loadGallery, 200);
+        const rawData = await response.json();
+        const data = rawData.profile || rawData;
+
+        // 1. Text eintragen (Nutzt 'about-text' mit Bindestrich!)
+        const aboutEl = document.getElementById('about-text');
+        if (aboutEl && data['about-text']) {
+            aboutEl.textContent = data['about-text'];
+        }
+
+        // 2. Bild eintragen (Nutzt 'artist-image' mit Bindestrich!)
+        const imgEl = document.getElementById('artist-image');
+        if (imgEl && data['artist-image']) {
+            imgEl.src = data['artist-image'];
+            imgEl.style.display = 'block';
+        }
+    } catch (error) {
+        console.error("Fehler beim Laden der Einstellungen:", error);
+    }
+}
+
+
+// HAUPTABLAUF: Garantiert die richtige Reihenfolge
+document.addEventListener('DOMContentLoaded', async () => {
+    console.log("1. Lade HTML-Komponenten...");
+
+    // WARTEN, bis Header, Main-Content und Footer vollständig verbaut sind
+    await loadComponents();
+
+    console.log("2. HTML fertig aufgebaut. Lade jetzt CMS-Daten...");
+
+    // JETZT sind #about-text und #artist-img garantiert im DOM
+    await loadSettings();
+    await loadGallery();
+
+    // Lightbox-Events initialisieren
+    initLightbox();
 });

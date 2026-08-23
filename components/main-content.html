@@ -26,26 +26,60 @@
         <div id="about" class="about-box">
             <h2>ÜBER MICH</h2>
             <div class="artist-profile">
-                <img src="../assets/images/Artist.jpeg" alt="Kurbanov Tattoo">
-                <p>Spezialisiert auf feine Linien, düstere Motive und individuelle Custom Designs. Jedes Tattoo wird exakt an die Anatomie angepasst.</p>
+                <img id="artist-image" alt="Kurbanov Tattoo">
+                <p id="about-text"></p>
             </div>
         </div>
 
         <div id="contact" class="contact-box">
             <h2>TERMIN ANFRAGEN</h2>
-            <form name="tattoo-booking" method="POST" data-netlify="true" class="booking-form">
-                <label>
-                    <input type="text" name="name" placeholder="Dein Name" required>
-                </label>
-                <label>
-                    <input type="email" name="email" placeholder="E-Mail-Adresse" required>
-                </label>
-                <label>
-                    <input type="text" name="idea" placeholder="Tattoo-Idee und Platzierung" required>
-                </label>
-                <label>
-                    <input type="text" name="size" placeholder="Größe (ca. in cm)">
-                </label>
+            <form name="tattoo-booking" method="POST" data-netlify="true" enctype="multipart/form-data" class="booking-form">
+                <input type="hidden" name="form-name" value="tattoo-booking" />
+
+                <div class="form-group">
+                    <label for="name">Dein Name</label>
+                    <input type="text" id="name" name="name" placeholder="z. B. Alex" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail-Adresse</label>
+                    <input type="email" id="email" name="email" placeholder="name@beispiel.de" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="style">Stil / Kategorie</label>
+                    <select id="style" name="style" required>
+                        <option value="" disabled selected>Bitte auswählen...</option>
+                        <option value="fineline">Fine Line / Filigran</option>
+                        <option value="blackwork">Blackwork / Dark Art</option>
+                        <option value="anime">Anime / Manga</option>
+                        <option value="wannado">Wannado Motive</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="placement">Körperstelle & Größe</label>
+                    <input type="text" id="placement" name="placement" placeholder="z. B. Unterarm außen, ca. 10x5 cm" required>
+                </div>
+
+                <!-- File Upload Box -->
+                <div class="form-group">
+                    <label>Referenzbilder / Skizzen</label>
+                    <div class="file-upload-wrapper">
+                        <input type="file" name="reference-images" accept="image/*" multiple>
+                        <div class="file-upload-text">
+                            <span class="icon">📁</span>
+                            <span>Klicke hier oder ziehe deine Bilder hinein</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Checkbox -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="coverup" name="coverup" value="yes">
+                    <label for="coverup">Handelt es sich um ein Cover-Up oder Narbe?</label>
+                </div>
+
                 <button type="submit" class="btn btn-submit">ANFRAGE ABSENDEN</button>
             </form>
         </div>

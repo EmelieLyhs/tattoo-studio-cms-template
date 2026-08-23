@@ -4,7 +4,7 @@ backend:
   name: git-gateway
   branch: main # Stelle sicher, dass hier dein Haupt-Branch steht (main oder master)
 
-media_folder: "assets/images/uploads"
+media_folder: "/assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
 # Aktiviert direktes Bearbeiten, Löschen und Hochladen
@@ -18,24 +18,27 @@ collections:
         label: "Artist Profil & Links"
         name: "profile"
         fields:
-          - { label: "Über mich Text", name: "about_text", widget: "text" }
-          - { label: "Instagram Link", name: "instagram_url", widget: "string" }
-          - { label: "Profilbild", name: "artist_image", widget: "image" }
+          - { label: "Über mich Text", name: "about-text", widget: "text" }
+          - { label: "Profilbild", name: "artist-image", widget: "image" }
 
   # 2. BEREICH: Portfolio-Tattoos (Einzelne Dateien = Bearbeiten & Löschen möglich)
   - name: "portfolio"
     label: "Portfolio Tattoos"
-    folder: "content/portfolio" # Erstellt für jedes Bild eine eigene .json/.md Datei
-    create: true # Erlaubt das Erstellen neuer Einträge
-    delete: true # ERMÖGLICHT DAS LÖSCHEN VON EINZELNEN TATTOOS
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Titel / Alt-Text", name: "title", widget: "string" }
-      - { label: "Tattoo Bild", name: "image", widget: "image" }
-      - {
-        label: "Kategorien",
-        name: "categories",
-        widget: "select",
-        multiple: true, # Erlaubt die Auswahl mehrerer Kategorien
-        options: ["anime", "fineline", "blackwork", "color"]
-      }
+    files:
+      - file: "content/tattoos.json"
+        label: "Alle Tattoos"
+        name: "tattoos_list"
+        fields:
+          - label: "Tattoos Liste"
+            name: "items"
+            widget: "list"
+            fields:
+                - { label: "Titel", name: "title", widget: "string" }
+                - { label: "Bild", name: "image", widget: "image" }
+                - {
+                  label: "Kategorien",
+                  name: "categories",
+                  widget: "select",
+                  multiple: true, # ERMÖGLICHT MEHRFACHAUSWAHL
+                  options: [ "anime", "fineline", "blackwork" ]
+                }
