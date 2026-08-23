@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "category": "fineline",
+      "title": "sakura flowers",
+      "image": "/assets/images/uploads/anime1.jpeg",
+      "categories": [
+        "fineline",
+        "anime"
+      ]
+    },
+    {
+      "image": "/assets/images/uploads/anime2.jpeg",
+      "title": "sakura",
+      "category": "anime",
+      "categories": [
+        "fineline",
+        "anime"
+      ]
+    }
+  ]
+}
