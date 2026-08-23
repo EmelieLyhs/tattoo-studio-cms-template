@@ -111,6 +111,10 @@ body {
     transition: transform 0.4s ease;
 }
 
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
 /* Layout Grid for About & Contact */
 .grid-section {
     display: grid;
@@ -158,6 +162,66 @@ body {
 .btn-submit {
     margin-top: 15px;
     width: 100%;
+}
+
+/* Lightbox Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    object-fit: contain;
+}
+
+#modal-caption {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #888;
+}
+
+/* Zeiger über Galerie-Bildern anzeigen */
+.gallery-item img {
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

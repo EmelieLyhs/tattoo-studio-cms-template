@@ -87,24 +87,57 @@ async function loadGallery() {
 
         // Aktiviert danach die Filter-Logik
         initGalleryFilter();
+        initLightbox();
 
     } catch (error) {
         console.error('Fehler beim Laden der Galerie-Bilder:', error);
     }
 }
 
+function initLightbox() {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const captionText = document.getElementById('modal-caption');
+    const closeBtn = document.querySelector('.modal-close');
 
-// Nach dem Laden der Main-Komponente aufrufen:
-document.addEventListener('DOMContentLoaded', () => {
-    // Falls deine Komponenten async geladen werden, rufe loadGallery() auf, sobald main-placeholder befüllt ist
-    setTimeout(loadGallery, 200);
-});
+    if (!modal || !modalImg) return;
 
+    // Klick-Event per Event Delegation auf das Galerie-Raster
+    const galleryContainer = document.getElementById('gallery-container'); // Name deines Galerie-Containers anpassen
+
+    if (galleryContainer) {
+        galleryContainer.addEventListener('click', (e) => {
+            const clickedImg = e.target.closest('.gallery-item img');
+            if (clickedImg) {
+                modal.classList.add('show');
+                modalImg.src = clickedImg.src;
+                captionText.textContent = clickedImg.alt || '';
+            }
+        });
+    }
+
+    // Funktion zum Schließen
+    const closeModal = () => {
+        modal.classList.remove('show');
+    };
+
+    // Schließen bei Klick auf das 'X' oder den dunklen Hintergrund
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Schließen mit der ESC-Taste
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+}
 
 
 document.addEventListener('DOMContentLoaded', () => {
     loadComponents();
-    initGalleryFilter();
     loadProfileData();
-    loadGallery();
+    setTimeout(loadGallery, 200);
 });

@@ -1,14 +1,18 @@
+local_backend: true
+
 backend:
   name: git-gateway
-  branch: master # Oder 'master', je nach deinem GitHub-Branch-Namen
+  branch: main # Stelle sicher, dass hier dein Haupt-Branch steht (main oder master)
 
-media_folder: "assets/images" # Wo hochgeladene Bilder gespeichert werden
-public_folder: "assets/images"
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
+# Aktiviert direktes Bearbeiten, Löschen und Hochladen
 collections:
   # 1. BEREICH: Allgemeine Artist-Infos & Social Links
   - name: "settings"
     label: "Einstellungen & Profil"
+    delete: false # Verhindert versehentliches Löschen der Profil-Konfiguration
     files:
       - file: "content/settings.json"
         label: "Artist Profil & Links"
@@ -18,18 +22,20 @@ collections:
           - { label: "Instagram Link", name: "instagram_url", widget: "string" }
           - { label: "Profilbild", name: "artist_image", widget: "image" }
 
-  # 2. BEREICH: Portfolio-Tattoos
+  # 2. BEREICH: Portfolio-Tattoos (Einzelne Dateien = Bearbeiten & Löschen möglich)
   - name: "portfolio"
     label: "Portfolio Tattoos"
-    folder: "content/portfolio"
-    create: true # Erlaubt das Hinzufügen neuer Tattoos
+    folder: "content/portfolio" # Erstellt für jedes Bild eine eigene .json/.md Datei
+    create: true # Erlaubt das Erstellen neuer Einträge
+    delete: true # ERMÖGLICHT DAS LÖSCHEN VON EINZELNEN TATTOOS
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Titel / Beschreibung", name: "title", widget: "string" }
+      - { label: "Titel / Alt-Text", name: "title", widget: "string" }
       - { label: "Tattoo Bild", name: "image", widget: "image" }
       - {
-        label: "Kategorie",
-        name: "category",
+        label: "Kategorien",
+        name: "categories",
         widget: "select",
-        options: ["anime", "fineline", "blackwork"]
+        multiple: true, # Erlaubt die Auswahl mehrerer Kategorien
+        options: ["anime", "fineline", "blackwork", "color"]
       }

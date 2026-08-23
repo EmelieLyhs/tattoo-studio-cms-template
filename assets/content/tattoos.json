@@ -1,11 +1,11 @@
 [
   {
-    "src": "./assets/images/uploads/anime1.jpeg",
+    "src": "/assets/images/uploads/anime1.jpeg",
     "category": ["anime", "fineline" ],
     "alt": "Anime Tattoo"
   },
   {
-    "src": "../images/uploads/anime2.jpeg",
+    "src": "assets/images/uploads/anime2.jpeg",
     "category": ["anime" , "fineline"],
     "alt": "Anime Tattoo"
   },
