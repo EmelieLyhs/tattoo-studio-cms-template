@@ -2,7 +2,7 @@ local_backend: true
 
 backend:
   name: git-gateway
-  branch: main # Stelle sicher, dass hier dein Haupt-Branch steht (main oder master)
+  branch: development # Stelle sicher, dass hier dein Haupt-Branch steht (main oder master)
 
   roles: [admin]
 
