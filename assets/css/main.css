@@ -13,26 +13,35 @@ body {
 
 /* Hero */
 .hero {
-    height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(18, 18, 18, 1)), url('../images/blackwork-show.jpeg') center/cover;
+    position: relative;
+    width: 100%;
+    min-height: 80vh; /* Oder 100vh für Fullscreen */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 0 20px;
+
+    /* Hintergrund-Eigenschaften */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.hero h1 {
-    font-size: 2.2rem;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-    color: #fff;
+/* Optional: Dunkler Overlayer für bessere Textlesbarkeit */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 60% schwarze Abdunklung */
+    z-index: 1;
 }
 
-.hero p {
-    color: #aaa;
-    margin-bottom: 25px;
+.hero-content {
+    position: relative;
+    z-index: 2; /* Text über dem dunklen Overlay halten */
 }
 
 /* Buttons */

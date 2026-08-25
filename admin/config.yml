@@ -4,6 +4,8 @@ backend:
   name: git-gateway
   branch: main # Stelle sicher, dass hier dein Haupt-Branch steht (main oder master)
 
+  roles: [admin]
+
 media_folder: "/assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
@@ -20,6 +22,7 @@ collections:
         fields:
           - { label: "Über mich Text", name: "about-text", widget: "text" }
           - { label: "Profilbild", name: "artist-image", widget: "image" }
+          - { label: "Hintergrundbild", name: "hero-image", widget: "image", required: false }
 
   # 2. BEREICH: Portfolio-Tattoos (Einzelne Dateien = Bearbeiten & Löschen möglich)
   - name: "portfolio"

@@ -148,25 +148,70 @@ async function loadSettings() {
             imgEl.src = data['artist-image'];
             imgEl.style.display = 'block';
         }
+
+        const heroEl = document.getElementById('hero-section');
+        if (heroEl && data['hero-image']) {
+            // Setzt den Pfad als CSS background-image
+            heroEl.style.backgroundImage = `url('${data['hero-image']}')`;
+        }
+
     } catch (error) {
         console.error("Fehler beim Laden der Einstellungen:", error);
     }
 }
 
+function handleBookingSubmit() {
+    const form = document.querySelector('.booking-form');
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Verhindert das Neuladen & den 404-Fehler
+
+        const formData = new FormData(form);
+
+        // Falls das versteckte Feld fehlt, fügen wir den Formular-Namen explizit hinzu
+        if (!formData.has('form-name')) {
+            formData.append('form-name', 'tattoo-booking');
+        }
+
+        try {
+            // Senden der Daten per Fetch an Netlify
+            const response = await fetch('/', {
+                method: 'POST',
+                body: formData // Sendet FormData direkt (unterstützt Text & Datei-Uploads)
+            });
+
+            if (response.ok) {
+                // Erfolgsmeldung anzeigen
+                form.innerHTML = `
+                    <div style="text-align: center; padding: 2.5rem 1rem; color: #ffffff;">
+                        <h3 style="margin-bottom: 1rem; letter-spacing: 2px; text-transform: uppercase;">ANFRAGE ERFOLGREICH!</h3>
+                        <p style="color: #aaaaaa; max-width: 400px; margin: 0 auto; line-height: 1.6;">
+                            Vielen Dank. Ich habe deine Nachricht erhalten und melde mich in Kürze bei dir per E-Mail.
+                        </p>
+                    </div>
+                `;
+            } else {
+                console.error('Netlify Form Error:', response.status, response.statusText);
+                alert('Fehler beim Senden (' + response.status + '). Bitte versuche es erneut.');
+            }
+        } catch (error) {
+            console.error('Netzwerk-Fehler beim Formular:', error);
+            alert('Netzwerkfehler beim Absenden. Bitte prüfe deine Internetverbindung.');
+        }
+    });
+}
+
 
 // HAUPTABLAUF: Garantiert die richtige Reihenfolge
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log("1. Lade HTML-Komponenten...");
-
     // WARTEN, bis Header, Main-Content und Footer vollständig verbaut sind
     await loadComponents();
-
-    console.log("2. HTML fertig aufgebaut. Lade jetzt CMS-Daten...");
-
     // JETZT sind #about-text und #artist-img garantiert im DOM
     await loadSettings();
     await loadGallery();
-
     // Lightbox-Events initialisieren
     initLightbox();
+
+    handleBookingSubmit();
 });
