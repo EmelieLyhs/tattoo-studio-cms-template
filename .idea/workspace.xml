@@ -4,37 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d74ab74-8414-4638-bb3d-e8d9d9a5a00a" name="Changes" comment="Add Netlify Identity integration; update hero section and user settings">
-      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@netlify/identity/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@netlify/identity/dist/main.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@netlify/identity/dist/main.d.cts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@netlify/identity/dist/main.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@netlify/identity/dist/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@netlify/identity/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/browser/gotrue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/lib/admin.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/lib/api.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/lib/index.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/lib/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/lib/user.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/src/admin.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/src/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/src/images/identity-settings-registration.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/gotrue-js/src/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="6d74ab74-8414-4638-bb3d-e8d9d9a5a00a" name="Changes" comment="Add hidden form for tattoo booking; configure Netlify integration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main-content.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/main-content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +55,9 @@
   }
 }</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -130,7 +104,7 @@
       <workItem from="1787469511139" duration="5813000" />
       <workItem from="1787493607430" duration="5503000" />
       <workItem from="1787504847178" duration="2086000" />
-      <workItem from="1787646754947" duration="2323000" />
+      <workItem from="1787646754947" duration="2989000" />
     </task>
     <task id="LOCAL-00001" summary="Update configuration and footer styles; add lightbox functionality">
       <option name="closed" value="true" />
@@ -156,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787498164763</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Netlify Identity integration; update hero section and user settings">
+      <option name="closed" value="true" />
+      <created>1787649568952</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1787649568952</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +149,8 @@
     <MESSAGE value="Update configuration, enhance gallery functionality, and improve booking form styles" />
     <MESSAGE value="Add settings and tattoos data; configure project settings" />
     <MESSAGE value="Add Netlify Identity integration; update hero section and user settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Netlify Identity integration; update hero section and user settings" />
+    <MESSAGE value="Add hidden form for tattoo booking; configure Netlify integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add hidden form for tattoo booking; configure Netlify integration" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
