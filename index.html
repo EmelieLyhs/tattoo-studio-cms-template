@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurbanov Tattoo | Fine Line & Custom Art</title>
 
+
+    <!-- Netlify Identity Widget für Logins & Einladungs-Tokens
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,8 +16,6 @@
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
 
-    <!-- Netlify Identity Widget für Logins & Einladungs-Tokens -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -28,13 +30,21 @@
         <div id="modal-caption"></div>
     </div>
 
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {
+                // 1. Wenn kein User eingeloggt ist und ein Token in der URL steckt -> Pop-up sofort öffnen
                 if (!user) {
                     window.netlifyIdentity.on("login", () => {
+                        // Nach erfolgreichem Passwort-Setzen / Login direkt ins Admin-Panel
                         document.location.href = "/admin/";
                     });
+
+                    // Prüfen, ob in der URL ein invite_token oder confirmation_token steckt
+                    if (window.location.hash && window.location.hash.includes("token=")) {
+                        window.netlifyIdentity.open(); // Öffnet das Fenster zur Passwort-Eingabe!
+                    }
                 }
             });
         }
