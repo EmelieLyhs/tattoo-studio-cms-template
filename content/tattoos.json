@@ -1,20 +1,24 @@
 {
   "items": [
     {
-      "category": "fineline",
-      "title": "sakura flowers",
-      "image": "/assets/images/uploads/anime1.jpeg",
+      "categories": [
+        "fineline"
+      ],
+      "image": "/assets/images/uploads/jj-jordan-eenumtwm6ec-unsplash.jpg",
+      "title": "Mandala"
+    },
+    {
+      "image": "/assets/images/uploads/steven-erixon-sbrxqx8vvhg-unsplash.jpg",
+      "title": "abstract",
       "categories": [
         "blackwork"
       ]
     },
     {
-      "image": "/assets/images/uploads/anime2.jpeg",
-      "title": "sakura",
-      "category": "anime",
+      "image": "/assets/images/uploads/eduardo-vaccari-piltvcnqsfu-unsplash.jpg",
+      "title": "flowers",
       "categories": [
-        "fineline",
-        "anime"
+        "fineline"
       ]
     }
   ]
