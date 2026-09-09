@@ -8,3 +8,13 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+# Sensible Daten & Umgebungsvariablen
+.env
+.env.local
+*.env
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db
+# Node.js / Build-Tools
+node_modules/
+dist/
